@@ -14,23 +14,36 @@ function Header() {
     console.log(path)
   },[])
   return !path.includes('liveform')&& (
-    <div className='p-4 border-b shadow-sm '>
+    <div className='p-4 border-b shadow-sm'>
         <div className='flex items-center justify-between'>
         <Link href={'/'}>
-        <Image src={'/logo.svg'} width={150} height={50} alt='logo'/>
+        <Image 
+          src={'/logo.svg'} 
+          width={150} 
+          height={50} 
+          alt='logo'
+          className='w-[120px] md:w-[150px]' // responsive width
+        />
         </Link>
             {isSignedIn?
-            <div className='flex items-center gap-5'>
+            <div className='flex items-center gap-3 md:gap-5'> {/* responsive gap */}
               <Link href={'/dashboard'}>
-              <Button varient='outline' >Dashboard</Button>
+              <Button varient='outline' className='text-sm md:text-base px-3 md:px-4'> {/* responsive text and padding */}
+                Dashboard
+              </Button>
               </Link>
-              
             
-            <UserButton/>
+            <UserButton appearance={{
+              elements: {
+                userButtonBox: "h-8 w-8 md:h-10 md:w-10" // responsive user button size
+              }
+            }}/>
             </div>:
-            <div className='flex items-center gap-5'>
+            <div className='flex items-center gap-3 md:gap-5'> {/* responsive gap */}
             <SignInButton>
-              <Button>Get started</Button>
+              <Button className='text-sm md:text-base px-3 md:px-4'> {/* responsive text and padding */}
+                Get started
+              </Button>
             </SignInButton>
             </div>
           }
@@ -40,4 +53,3 @@ function Header() {
 }
 
 export default Header
-
