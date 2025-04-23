@@ -22,13 +22,13 @@ function Hero() {
         <div className="mx-auto w-full max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           {/* Hero Section */}
           <div className="mx-auto max-w-prose text-center mb-20">
-            <h1 className="text-3xl sm:text-4xl font-bold text-secondary sm:text-5xl">
+            <h1 className="text-3xl  font-bold text-secondary sm:text-5xl">
               Let 
               <strong className="text-primary"> AI Build </strong>
               your forms in seconds!
             </h1>
 
-            <p className="mt-4 text-sm sm:text-base text-pretty text-secondary sm:text-lg/relaxed">
+            <p className="mt-4 text-sm  text-pretty text-secondary sm:text-lg/relaxed">
               Accelerate your form creation process with AI-generated forms that are fast, reliable, and tailored to your requirements.
             </p>
 
