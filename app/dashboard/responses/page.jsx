@@ -4,7 +4,8 @@ import { Jsonforms } from '@/config/schema';
 import { useUser } from '@clerk/nextjs'
 import { eq } from 'drizzle-orm';
 import React, { useEffect, useState } from 'react'
-import Responseslist from './_components/responseslist';
+import Responseslist from './_components/ResponseslistTemp';
+
 
 function Responses() {
     const {user} = useUser();
@@ -30,6 +31,7 @@ function Responses() {
                   formRecord={form}
                   jsonFrom={JSON.parse(form.jsonfrom)}
                   ></Responseslist>
+                  
                   
                 </div>
             ))}
